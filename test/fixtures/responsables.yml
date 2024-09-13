@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: responsables
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  last_name  :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  name: MyString
+  last_name: MyString
+
+two:
+  name: MyString
+  last_name: MyString

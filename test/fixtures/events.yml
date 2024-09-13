@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id             :integer          not null, primary key
+#  name           :string
+#  description    :text
+#  date_start     :datetime
+#  date_finish    :datetime
+#  total          :integer
+#  responsable_id :integer          not null
+#  participants   :string
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+one:
+  name: MyString
+  description: MyText
+  date_start: 2024-09-13 16:52:27
+  date_finish: 2024-09-13 16:52:27
+  total: 1
+  responsable: one
+  participants: MyString
+
+two:
+  name: MyString
+  description: MyText
+  date_start: 2024-09-13 16:52:27
+  date_finish: 2024-09-13 16:52:27
+  total: 1
+  responsable: two
+  participants: MyString
