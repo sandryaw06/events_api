@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_14_153330) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_17_225109) do
   create_table "clients", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,10 +37,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_14_153330) do
   create_table "people", force: :cascade do |t|
     t.string "name"
     t.string "last_name"
-    t.integer "events_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["events_id"], name: "index_people_on_events_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -58,6 +56,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_14_153330) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "event_id_id"
+    t.index ["event_id_id"], name: "index_responsables_on_event_id_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -69,7 +69,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_14_153330) do
   end
 
   add_foreign_key "events", "responsables"
-  add_foreign_key "people", "events", column: "events_id"
   add_foreign_key "reservations", "clients"
   add_foreign_key "reservations", "events"
 end
